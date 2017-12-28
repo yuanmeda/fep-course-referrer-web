@@ -1,0 +1,8 @@
+.ae-layout-main {
+  margin: 1rem;
+  padding: 1.5rem;
+  overflow: auto;
+  box-sizing: border-box;
+  background: #fff;
+  height: calc(100% - 4.5rem);
+}

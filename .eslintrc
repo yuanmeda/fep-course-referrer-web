@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "@sdp.nd/eslint-config-react"
+  ],
+  "globals": {
+    "AECONST": false,
+    "ORIGINS": false
+  }
+}

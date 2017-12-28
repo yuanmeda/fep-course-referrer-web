@@ -1,0 +1,52 @@
+<script>
+  var global_uc_version = (function () {
+    var host = location.hostname
+    if (/\.aws\.101\.com/.test(host)) {
+      return 'aws';
+    }
+    if (/\.awsca\.101\.com/.test(host)) {
+      return 'awsca';
+    }
+    if (/\.dyejia\.cn$/.test(host)) {
+      return 'dyejia';
+    }
+    // 测试、开发、预生产、localhost、192.168.x.x => 预生产
+    if (/(debug|dev)\.web\.nd$|beta(\.web\.sdp)?\.101\.com$|\d+\.\d+\.\d+\.\d+(:\d+)?$|localhost(:\d+)?$/.test(host)) {
+      return 'pre';
+    }
+    return 'pro';
+  })();
+  var global_uc_sdp_app_id = (function(){
+    // 从 URL 中获取 sdp-app-id，取值应是 uuid
+    var match = location.href.match(/sdp-app-id=([-0-9a-f]+)/);
+    return match ? match[1] : '';
+  })();
+  var global_uc_sdp_migrated = global_uc_sdp_app_id ? 'true' : 'false';
+  // 为了兼容无 sdp-app-id 的情况，目前不考虑支持虚拟组织，因为它终将消亡
+  var ucComponentConfig = global_uc_sdp_app_id ? null : (function(){
+    // 从 URL 中获取 org_name
+    var match = location.href.match(/org_name=([-0-9a-zA-Z_]+)/);
+    return match ? {
+      org_name: match[1]
+    } : {};
+  })();
+</script>
+<script src="//cdncs.101.com/v0.1/static/uc_cdn/ucManager1.0.min.js"></script>
+<script>
+  // AE Auth 模块使用 ucsdk 1.0 的 API
+  // 使用 0.93.ejs 或 global_uc_sdp_migrated === 'false'，需要做兼容
+  ucManager.isOk || (ucManager.isOk = function (res) {
+    if(res && typeof res === 'object'){
+      return !(res.code && res.code.substring(0, 2) === 'UC');
+    } else {
+      return res !== 'false' && res !== 'fail' && res !== false;
+    }
+  });
+
+  ucManager.getPictureCode || (ucManager.getPictureCode = function (sessionId) {
+    return window.ORIGINS.UC + '/v0.93/sessions/'+ sessionId + '/identify_code';
+  });
+
+  ucManager.login || (ucManager.login = ucManager.loginBySession);
+  ucManager.logout || (ucManager.logout = ucManager.logOut);
+</script>

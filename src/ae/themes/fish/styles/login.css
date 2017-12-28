@@ -1,0 +1,47 @@
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -160px;
+  width: 320px;
+  height: auto;
+  padding: 36px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+
+  & .logo {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    & img {
+      margin-right: 8px;
+    }
+
+    & span {
+      font-size: 16px;
+      vertical-align: text-bottom;
+      display: inline-block;
+    }
+  }
+
+  & button {
+    width: 100%;
+  }
+
+  & .captcha {
+    & img {
+      vertical-align: middle;
+    }
+
+    & i {
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 34px;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+}

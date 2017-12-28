@@ -1,0 +1,8 @@
+import './promise'
+import 'core-js/fn/array/find'
+import 'core-js/fn/array/find-index'
+import 'core-js/fn/array/includes'
+import 'core-js/fn/object/assign'
+import 'core-js/fn/object/entries'
+import 'core-js/fn/object/values'
+import 'regenerator-runtime/runtime'

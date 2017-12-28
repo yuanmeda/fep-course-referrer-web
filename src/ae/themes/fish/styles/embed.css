@@ -1,0 +1,17 @@
+.embed {
+  & .ae-layout-aside-wrapper {
+    display: none;
+  }
+
+  & .ae-layout-main-wrapper {
+    margin-left: 0;
+  }
+
+  & .ae-layout-header {
+    display: none;
+  }
+
+  & .ae-layout-breadcrumb {
+    display: none;
+  }
+}

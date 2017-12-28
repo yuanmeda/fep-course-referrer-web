@@ -1,0 +1,9 @@
+{
+  "white": "#FFFFFF",
+  "black": "#000000",
+  "red": "#FF5745",
+  "blue": "#2D8CF0",
+
+  "aside_width": "250px",
+  "page_min_width": "980px"
+}

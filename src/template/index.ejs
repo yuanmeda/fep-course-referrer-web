@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="ae">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- UC 1.0, 0.93 请使用 ./uc0.93.ejs -->
+  <%= require('html-loader!./uc1.0.ejs') %>
+  <script src="/js/cs-object-sdk-js/js/jquery-1.7.1.min.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/lib/spark-md5.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/common/content.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/common/utils.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/common/httpclient.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/third-platform-sdk/ceph-s3-sdk.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/third-platform-adapter/ceph-s3-adapter.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/common/uploader.js"></script>
+  <script src="/js/cs-object-sdk-js/js/cssdk/api/cs-object.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

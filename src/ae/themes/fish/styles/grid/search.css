@@ -1,0 +1,17 @@
+.ae-grid-search {
+  overflow: hidden;
+
+  & .ae-form-buttons {
+    display: inline-block;
+  }
+
+  & .ae-grid-paginate {
+    float: left;
+    width: 100%;
+  }
+}
+
+.ae-grid-search-content {
+  margin: 0 0 1em;
+  float: right;
+}

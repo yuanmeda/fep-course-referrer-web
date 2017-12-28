@@ -1,0 +1,145 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@sdp.nd/ae@^0.1.19-dev",
+        "scope": "@sdp.nd",
+        "escapedName": "@sdp.nd%2fae",
+        "name": "@sdp.nd/ae",
+        "rawSpec": "^0.1.19-dev",
+        "spec": ">=0.1.19-dev <0.2.0",
+        "type": "range"
+      },
+      "E:\\gerrit\\fep-course-referrer-web"
+    ]
+  ],
+  "_cnpm_publish_time": 1513866524152,
+  "_from": "@sdp.nd/ae@>=0.1.19-dev <0.2.0",
+  "_id": "@sdp.nd/ae@0.1.19-dev",
+  "_inCache": true,
+  "_location": "/@sdp.nd/ae",
+  "_nodeVersion": "6.2.0",
+  "_npmUser": {
+    "name": "100000101",
+    "email": "100000101@nd.com"
+  },
+  "_npmVersion": "3.8.9",
+  "_phantomChildren": {},
+  "_publish_on_cnpm": true,
+  "_requested": {
+    "raw": "@sdp.nd/ae@^0.1.19-dev",
+    "scope": "@sdp.nd",
+    "escapedName": "@sdp.nd%2fae",
+    "name": "@sdp.nd/ae",
+    "rawSpec": "^0.1.19-dev",
+    "spec": ">=0.1.19-dev <0.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.sdp.nd/@sdp.nd/ae/download/@sdp.nd/ae-0.1.19-dev.tgz",
+  "_shasum": "14b8aaf4556dfe6843ec8841d264038ff006624d",
+  "_shrinkwrap": null,
+  "_spec": "@sdp.nd/ae@^0.1.19-dev",
+  "_where": "E:\\gerrit\\fep-course-referrer-web",
+  "dependencies": {
+    "@sdp.nd/redux-async-promise": "0.0.2",
+    "axios": "^0.17.1",
+    "core-js": "^2.5.1",
+    "filter-string": "^0.2.3",
+    "intl": "^1.2.5",
+    "intl-messageformat": "^2.2.0",
+    "js-base64": "^2.3.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "nuo": "^1.0.0",
+    "query-string": "^5.0.1",
+    "react-intl": "^2.4.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "5.0.6",
+    "react-router": "2.3.0",
+    "redux": "3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "^2.2.0",
+    "regenerator-runtime": "^0.11.0",
+    "scriptjs": "^2.5.8"
+  },
+  "description": "æ - Admin Engine",
+  "devDependencies": {
+    "@sdp.nd/eslint-config-react": "^2.0.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-regenerator-runtime": "^6.5.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.11.0",
+    "jest": "^21.2.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "dist": {
+    "shasum": "14b8aaf4556dfe6843ec8841d264038ff006624d",
+    "size": 99232,
+    "key": "/@sdp.nd/ae/-/@sdp.nd/ae-0.1.19-dev.tgz",
+    "tarball": "http://registry.npm.sdp.nd/@sdp.nd/ae/download/@sdp.nd/ae-0.1.19-dev.tgz"
+  },
+  "files": [
+    "components",
+    "constants",
+    "core",
+    "modules",
+    "polyfills",
+    "services",
+    "shared",
+    "store",
+    "themes",
+    "AE.jsx"
+  ],
+  "gitHead": "563fdde4af60a09542e9436e6c2e95dde5b27f27",
+  "jest": {
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [],
+    "testRegex": "/test/.+\\.spec\\.jsx?$",
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>"
+    ],
+    "moduleNameMapper": {
+      "^ae/(.*)$": "<rootDir>/$1"
+    }
+  },
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "100000101",
+      "email": "100000101@nd.com"
+    }
+  ],
+  "name": "@sdp.nd/ae",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@sdp.nd/fish": "^2.0.13-dev",
+    "react": "0.14.9",
+    "react-dom": "0.14.9"
+  },
+  "publish_time": 1513866524152,
+  "readme": "ERROR: No README data found!",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "exit 0",
+    "lint": "eslint ./ --ext .js --ext .jsx --fix",
+    "lint:css": "stylelint themes/**/*.css --fix",
+    "start": "jest --watch"
+  },
+  "version": "0.1.19-dev"
+}

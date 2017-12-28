@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "useBuiltIns": "entry"
+      }
+    }],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "transform-decorators-legacy",
+    [
+      "import",
+      {
+        "libraryName": "fish",
+        "libraryDirectory": "lib",
+        "style": true
+      }
+    ]
+  ],
+  "comments": false
+}

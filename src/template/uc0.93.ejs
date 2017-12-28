@@ -1,0 +1,54 @@
+<script id="uc-config">
+  var global_uc_sdp_migrated = false;
+  (function () {
+    var uc_url_front = (function () {
+      var host = location.hostname
+      if (/\.aws\.101\.com/.test(host)) {
+        return 'https://awsuc.101.com';
+      }
+      if (/\.awsca\.101\.com/.test(host)) {
+        return 'https://uc-awsca.101.com';
+      }
+      if (/\.dyejia\.cn$/.test(host)) {
+        return 'https://aqapi.dyejia.cn';
+      }
+      // 测试、开发、预生产、localhost、192.168.x => 预生产
+      if (/(debug|dev)\.web\.nd$|beta(\.web\.sdp)?\.101\.com$|\d+\.\d+\.\d+\.\d+(:\d+)?$|localhost(:\d+)?$/.test(host)) {
+        return 'https://ucbetapi.101.com';
+      }
+      return 'https://aqapi.101.com';
+    })() + '/v0.93/';
+
+    var org_name = (function(){
+      var match = location.search.match(/org_name=([^&]+)/);
+      match || console.warn('URL中未指定组织名称，将使用默认值：nd');
+      return match ? match[1] : 'nd';
+    })();
+
+    window.ucComponentConfig = {
+      language: 'zh',             // 国际化支持，zh 为中文，en 为英文
+      virtual_organizations: '0', // 1 为虚拟组织登陆，0 为普通登陆
+      uc_url_front: uc_url_front,
+      org_name: org_name
+    };
+  })()
+</script>
+<script src="//cdncs.101.com/v0.1/static/uc_cdn/ucManager.min.v0.11.js"></script>
+<script>
+  // AE Auth 模块使用 ucsdk 1.0 的 API
+  // 使用 0.93.ejs 或 global_uc_sdp_migrated === 'false'，需要做兼容
+  ucManager.isOk || (ucManager.isOk = function (res) {
+    if(res && typeof res === 'object'){
+      return !(res.code && res.code.substring(0, 2) === 'UC');
+    } else {
+      return res !== 'false' && res !== 'fail' && res !== false;
+    }
+  });
+
+  ucManager.getPictureCode || (ucManager.getPictureCode = function (sessionId) {
+    return window.ORIGINS.UC + '/v0.93/sessions/'+ sessionId + '/identify_code';
+  });
+
+  ucManager.login || (ucManager.login = ucManager.loginBySession);
+  ucManager.logout || (ucManager.logout = ucManager.logOut);
+</script>

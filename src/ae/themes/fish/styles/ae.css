@@ -1,0 +1,18 @@
+.ae-container {
+  /* min-height: 100%; */
+}
+
+.ae-component-forbidden,
+.ae-component-notfound {
+  padding-top: 300px;
+  background: url(../images/forbidden.png) no-repeat center 100px;
+  text-align: center;
+
+  & h3 {
+    display: none;
+  }
+
+  & p {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "AE": {
+    "RBAC": {
+      "forbidden": {
+        "401": "Need Login",
+        "403": "Permission denied"
+      }
+    },
+    "Grid": {
+      "operate": "Operate"
+    },
+    "Form": {
+      "reset": "Reset",
+      "submit": "Submit"
+    },
+    "Decorator": {
+      "detail": {
+        "label": "Detail",
+        "back": "Back"
+      },
+      "list": {
+        "label": "Reload"
+      },
+      "create": {
+        "label": "Create",
+        "reset": "Reset",
+        "submit": "Submit"
+      },
+      "edit": {
+        "label": "Edit",
+        "reset": "Reset",
+        "submit": "Submit"
+      },
+      "search": {
+        "label": "Search"
+      },
+      "del": {
+        "label": "Delete",
+        "title": "Please confirm",
+        "content": "Are you sure to delete the item?"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.ae-layout-breadcrumb {
+  color: color(var(--white) lightness(-20%));
+  height: 2.5rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: color(var(--white) lightness(-5%));
+  border-bottom: 1px solid color(var(--white) lightness(-10%));
+
+  &:empty {
+    display: none;
+  }
+}
+
+.ae-layout-breadcrumb-link {
+  & i {
+    margin-right: 0.25em;
+    color: color(var(--white) lightness(-30%));
+  }
+
+  & span {
+    color: color(var(--white) lightness(-30%));
+  }
+
+  & a {
+    & span {
+      color: color(var(--white) lightness(-40%));
+    }
+
+    &:hover {
+      & span {
+        color: color(var(--white) lightness(-60%));
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.ae-layout-breadcrumb-separator {
+  margin: 0 0.5em;
+  color: color(var(--white) lightness(-20%));
+}
